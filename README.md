@@ -1,27 +1,13 @@
-# project-1
-
-This repository contains the starter code for ***CMU 15-441/641 Networking and the Internet Project 1: A Web Server Called Liso***.
-
-## 1. Files
-- `DockerFile`: Script to build the docker image for the project's environment.
-- `Makefile`: Contains rules for `make`.
-- `README.md`: Current document.
-- `cp1`: CP1 scripts and examples.
-- `cp2`: CP2 scripts and examples.
-- `cp3`: CP3 scripts and examples.
-- `src/`: Source code for the project.
-    - `src/echo_client.c`: Simple echo network client.
-    - `src/echo_server.c`: Simple echo network server
-    - `src/example.c`: Example driver for parsing.
-    - `src/lexer.l`: Lex/Yacc related logic.
-    - `src/parser.y`
-    - `src/parse.c`
-- `include/parse.h`
-
-## 2. Environment Setup
-1. Install docker: https://www.docker.com
-2. Open a terminal and navigate to the directory containing this `README.md` file.
-3. Build the docker image: `docker build -t 15-441/641-project-1:latest -f ./DockerFile .`
-4. Run the docker container: ``docker run -it -v `pwd`:/home/project-1/ --name <name for your container> 15-441/641-project-1 /bin/bash``
-5. The starter code for the project is available at `/home/project-1/` in the container and `.` on your local machine. To make development easier, a mapping is established between these two folders. Modiying the code in one location will also effect the other one. This means that you can use an IDE to write code on your local machine and then seamlessly test it in the container.
-6. To test your server using a web browser, you need to configure port mapping for the docker container. Simply add the argument `-p 8888:15441` to the `docker run` command to establish a mapping from `127.0.0.1:15441` in the container to `127.0.0.1:8888` on your local machine. Then you can test your server by using a web browser (e.g., Chrome) on your local machine to navigate to the URL `127.0.0.1:8888`.
+# **第一周**：实现简单的Echo Web Server # 
+------
+### 具体要求： ###
+1. 掌握课本有关HTTP的内容；阅读HTTP/1.1的标准文档RFC2616； 
+2. 搭建编程环境（参见“讲解PPT-环境安装配置.pptx）； 
+3. 熟悉Socket编程方法； 
+4. 掌握lex和yacc正确解析消息（message）的方法； 
+5. 实现简单的echo web server。 
+    Server 收到 client 的带多请求行的消息后，能够正确解析出来，并且返回响应消息（response message）。分以下3种情况处理：
+    * Echo: 如果收到客户端发来的是GET, HEAD和POST方法，则echo回去，即重新封装（encapsulation）消息并返回给客户端。
+    * 没实现：如果收到客户端发来的是除GET, HEAD和POST以外的其它方法，服务器并没有实现，则需要返回响应消息“HTTP/1.1 501 Not Implemented\r\n\r\n”。 
+    * 格式错误：如果收到的客户端消息的格式错误，应能够识别出来，并返回错误代码为400的HTTP响应消息“HTTP/1.1 400 Bad request\r\n\r\n”。 
+7. 使用浏览器测试，能够完成评分细则表中列出的功能。给出测试样例，并将测试结果展示在实验结果部分。
