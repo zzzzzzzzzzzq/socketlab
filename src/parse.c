@@ -39,14 +39,12 @@ Request * parse(char *buffer, int size, int socketFd) {
 			state = STATE_START;
 			continue;
 		}
-
+		if(state==STATE_CRLF)header_size++;//每次换行更新请求行数量
 		if (ch == expected)
 			state++;
 		else
 			state = STATE_START;
-
 	}
-	if(state==STATE_CR)header_size++;//每次换行更新请求行数量
     //Valid End State
 	if (state == STATE_CRLFCRLF) {
 		Request *request = (Request *) malloc(sizeof(Request));
