@@ -21,6 +21,12 @@ int main(int argc, char **argv){
   //be read from that fd
   Request *request = parse(buf,readRet,fd_in);
   //Just printing everything
+  if(strcmp(request->http_method,"GET")!=0&&strcmp(request->http_method,"POST")!=0&&strcmp(request->http_method,"HEAD")!=0){
+    printf("HTTP/1.1 501 Not Implemented\r\n\r\n");
+    free(request->headers);
+    free(request);
+    return 0;
+  }//没实现
   printf("Http Method %s\n",request->http_method);
   printf("Http Version %s\n",request->http_version);
   printf("Http Uri %s\n",request->http_uri);
