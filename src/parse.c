@@ -10,6 +10,7 @@ Request * parse(char *buffer, int size, int socketFd) {
 	};
 
 	int i = 0, state;
+	int header_size=0;//记录请求行个数
 	size_t offset = 0;
 	char ch;
 	char buf[8192];
@@ -38,20 +39,18 @@ Request * parse(char *buffer, int size, int socketFd) {
 			state = STATE_START;
 			continue;
 		}
-
+		if(state==STATE_CRLF)header_size++;//每次换行更新请求行数量
 		if (ch == expected)
 			state++;
 		else
 			state = STATE_START;
-
 	}
-
     //Valid End State
 	if (state == STATE_CRLFCRLF) {
 		Request *request = (Request *) malloc(sizeof(Request));
         request->header_count=0;
         //TODO You will need to handle resizing this in parser.y
-        request->headers = (Request_header *) malloc(sizeof(Request_header)*1);
+        request->headers = (Request_header *) malloc(sizeof(Request_header)*header_size);
 		set_parsing_options(buf, i, request);
 
 		if (yyparse() == SUCCESS) {
@@ -62,4 +61,3 @@ Request * parse(char *buffer, int size, int socketFd) {
     printf("Parsing Failed\n");
 	return NULL;
 }
-
