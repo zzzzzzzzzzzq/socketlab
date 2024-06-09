@@ -1,4 +1,4 @@
-# ~~骚剋特~~ # # :smile:
+# ~~骚剋特~~ :smile: 
 # socket programming #
 ------
 ### 1. 项目简介 ###
