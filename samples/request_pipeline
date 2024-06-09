@@ -4,7 +4,7 @@ Connection: keep-alive
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
 Accept-Encoding: gzip, deflate, sdch
-Accept-Language: en-US,en;q=0.8
+Accept-Language: en-US,en;q=0.1
 
 DELETE /~prs/15-441-F15/ HTTP/1.1
 Host: www.cs.cmu.edu
@@ -12,7 +12,7 @@ Connection: keep-alive
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
 Accept-Encoding: gzip, deflate, sdch
-Accept-Language: en-US,en;q=0.8
+Accept-Language: en-US,en;q=0.2
 
 GET / HTTP/1.1
 Host: www.cs.cmu.edu
@@ -20,7 +20,7 @@ Connection: keep-alive
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
 Accept-Encoding: gzip, deflate, sdch
-Accept-Language: en-US,en;q=0.8
+Accept-Language: en-US,en;q=0.3
 
 HEAD / HTTP/1.5
 Host: www.cs.cmu.edu
@@ -28,7 +28,7 @@ Connection: keep-alive
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
 Accept-Encoding: gzip, deflate, sdch
-Accept-Language: en-US,en;q=0.8
+Accept-Language: en-US,en;q=0.4
 
 HEAD / HTTP/1.1
 Host: www.cs.cmu.edu
@@ -36,7 +36,7 @@ Connection: keep-alive
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
 Accept-Encoding: gzip, deflate, sdch
-Accept-Language: en-US,en;q=0.8
+Accept-Language: en-US,en;q=0.5
 
 HEAD / HTTP/1.1
 Host: www.cs.cmu.edu
@@ -44,7 +44,7 @@ Connection: keep-alive
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
 Accept-Encoding: gzip, deflate, sdch
-Accept-Language: en-US,en;q=0.8
+Accept-Language: en-US,en;q=0.6
 
 HAHE /~prs/15-441-F15/ HTTP/1.10
 Host: www.cs.cmu.edu
@@ -52,7 +52,7 @@ Connection: keep-alive
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
 Accept-Encoding: gzip, deflate, sdch
-Accept-Language: en-US,en;q=0.8
+Accept-Language: en-US,en;q=0.7
 
 HOHO /~prs/15-441-F15/ HTTP/1.1
 Host: www.cs.cmu.edu
@@ -68,15 +68,12 @@ Connection: keep-alive
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
 Accept-Encoding: gzip, deflate, sdch
-Accept-Language: en-US,en;q=0.8
+Accept-Language: en-US,en;q=0.9
 
-GET 
-/~prs/15-441-F15/ HTTP/1.1
+GET /~prs/15-441-F15/ HTTP/1.1
 Host: www.cs.cmu.edu
 Connection: keep-alive
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
 Accept-Encoding: gzip, deflate, sdch
-Accept-Language: en-US,en;q=0.8
-
-
+Accept-Language: en-US,en;q=0.10
