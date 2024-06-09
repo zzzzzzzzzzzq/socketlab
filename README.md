@@ -1,6 +1,6 @@
 # socket programming #
 ------
-### ** 1. 项目简介 ** ###
+### **1. 项目简介** ###
 使用BSD Socket API（Berkeley Sockets API）实现具有并发性的 web server。依据RFC 2616文档[1]，实现HTTP/1.1的HEAD, GET, POST等基本功能。项目完成后，能够使用普通商用浏览器从所实现的web server下载静态网页。 
 ### 2. 项目目标 ###
 * 能够熟练阅读Internet标准RFC文件，并实现相应协议； 
