@@ -12,3 +12,5 @@
 * 使用标准的socket库和提供的库函数，禁止使用任何自定义的socket类或库。 
 * 禁止使用libpthread 线程库。 
 * 在基础代码的框架下编程实现。基础代码可在智慧树平台上下载。
+
+# 已经贴心地按任务保存啦 :kissing_heart: :sparkling_heart: 
